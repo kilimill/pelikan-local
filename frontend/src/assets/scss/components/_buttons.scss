@@ -1,0 +1,18 @@
+@import "src/assets/scss/theme";
+@import "~bootstrap/scss/buttons";
+
+.btn-outline-transparent {
+  $color: $light;
+  $background: rgba(0, 0, 0, .2);
+  @include button-outline-variant(
+    $color: $color,
+    $color-hover: darken($color, 1),
+    $active-background: $background,
+    $active-color: darken($color, 1)
+  );
+
+  &, &:active, &:focus, &.active {
+    border-width: 0;
+    box-shadow: none;
+  }
+}

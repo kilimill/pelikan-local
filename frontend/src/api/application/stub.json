@@ -1,0 +1,33 @@
+{
+  "settings": {
+    "room": {
+      "activeBoardId": 0,
+      "activeMountPointId": 0,
+      "blockPrivateChat": true,
+      "blockPublicChat": true,
+      "blockRaiseHand": true,
+      "boardIsActive": false,
+      "currentPresId": 0,
+      "currentSlide": 1,
+      "currentVPDF": true,
+      "drawMode": false,
+      "playbackAccess": true,
+      "presStrictMode": false,
+      "screenCaptureActive": false,
+      "soundPrivateChatMessage": true,
+      "soundPublicChatMessage": true,
+      "soundRaiseHand": true,
+      "userCallControl": false,
+      "userCallDrawMode": true,
+      "videoStrictMode": false
+    }
+  },
+  "currentUser": {
+    "roleId": 0
+  },
+  "playbackStore": {
+    "dbName": "roomIDB",
+    "storeName": "events",
+    "chunkLength": "10"
+  }
+}

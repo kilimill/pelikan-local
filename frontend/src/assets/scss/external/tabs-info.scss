@@ -1,0 +1,92 @@
+.tab-content .tab-info {
+  $button-size:   24px;//1.6em;
+  $button-offset: 3px;//0.025em;
+
+  .button-container {
+    text-align: left;
+    padding: 4px 0;
+    border-bottom: 1px dashed #4d4d4d;
+    display: flex;
+    flex-direction: column;
+
+    .btn.add-button {
+      display: flex;
+      align-items: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-size: 1em;
+
+
+      input[type=file] {
+        display: none;
+      }
+
+      &:hover {color: #999}
+      &:active, &:focus {box-shadow: none}
+      .material-icons {
+        margin-right: 3px;
+        font-size: $button-size;
+      }
+    }
+
+    .form-text {
+      display: block;
+      color: #aaa;
+      margin-left: $button-size + $button-offset;
+    }
+  }
+
+  // lists
+  .lists-holder {
+    &.empty::before {
+      content: "Материалов нет";
+      display: flex;
+      justify-content: center;
+    }
+    margin-top: 5px;
+    min-height: 50px;
+    text-align: left;
+  }
+
+  .materials-list,
+  .presentations-list,
+  .boards-list {
+    // list items
+    .list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      .item-actions {display: flex}
+      .item-name {overflow-wrap: anywhere}
+    }
+
+    // actions
+    .btn.action-button {
+      display: flex;
+      margin: 0;
+      padding: 0 5px 0 0;
+      font-size: $button-size;
+      color: white;
+      border: none;
+
+      // Icon  set
+      .material-icons {
+        font-size: 24px;
+        &--visibility-on::before {content: "visibility"}
+        &--visibility-off::before {content: "visibility_off"}
+        &--delete-item::before {content: "close"}
+      }
+
+      // actions
+      &[name=visibility] {
+        &.visible {.material-icons--visibility-off { display: none }}
+        &:not(.visible) {.material-icons--visibility-on { display: none }}
+      }
+
+      // behaviors
+      &:focus, &:active, &:hover {box-shadow: none}
+      &:hover { color: #AAA }
+    }
+  }
+}

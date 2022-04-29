@@ -1,0 +1,82 @@
+@import "theme";
+
+body, #app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+
+.room, .playback {
+  height: 100%;
+  overflow: hidden;
+  $content-offset: 10px;
+
+  .a-side, .b-side {
+    display: flex;
+    max-height: 100%;
+
+    & > * {
+      display: flex;
+      flex-direction: column;
+      padding: $content-offset;
+    }
+  }
+
+  .a-side {
+    padding-right: 0;
+  }
+
+  .b-side {
+    background-color: $dark;
+    color: $light;
+    flex-direction: column;
+    padding-left: 0;
+    .tabs-holder { flex: 1 0 0; overflow: hidden; padding: 0; }
+  }
+
+  .place-holder {
+    flex: 0 0 100%;
+    position: relative;
+    max-width: 100%;
+
+    &--small {
+      flex: 0 0 auto;
+    }
+
+    &--large {
+      align-items: stretch;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      background-color: lightgrey;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .room, .playback {
+    margin: 0;
+    .a-side {display: none;}
+    .b-side {padding-right: 0; }
+    .b-side .small-place--holder { display: none; }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .room, .playback {
+    .b-side {width: 380px;}
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .room, .playback{
+    .b-side {width: 404px;}
+  }
+}

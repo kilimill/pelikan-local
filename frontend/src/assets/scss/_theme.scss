@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/functions";
+// Options
+$enable-rounded: false;
+$enable-shadows: false;
+
+//Colors
+//$secondary: #666666;
+$highlight: #6ee7b7;
+
+$light-gray: #CCCCCC;
+$middle-gray: #666666;
+$dark-gray: #222222;
+
+$custom-colors: (
+    "dark-gray": $dark-gray,
+    "middle-gray": $middle-gray,
+    "light-gray": $light-gray
+);
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+$theme-colors: map-merge($theme-colors, $custom-colors);

@@ -1,0 +1,25 @@
+// main panel contents
+.content-holder {
+
+  .content-controls {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 0 10px 10px;
+    width: 100%;
+
+    .btn-group {
+      background-color: rgba(0, 0, 0, .5);
+      color: white;
+      .btn-group {background-color: transparent}
+    }
+  }
+
+  &--small {
+    .content-controls {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+  }
+}
